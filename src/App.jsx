@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Search from './component/Search.jsx';
-import Spinner from './component/spinner.jsx';
+//import Spinner from './component/spinner.jsx';
 import MovieCard from './component/MovieCard.jsx';
 import { useDebounce } from 'react-use'
 import { getTrendingMovies, updateSearchCount } from './appwrite.js'
@@ -123,7 +123,8 @@ const App = () => {
         <section className='all-movies'>
           <h2>All Movies</h2>
           {isLoading ? (
-            <Spinner />
+            // <Spinner />
+            <div>Loading..</div>
           ) : errorMessage ? (
             <p className='text-red-500'>{errorMessage}</p>
           ) : (
